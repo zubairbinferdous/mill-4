@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explore Dom </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <p id="first">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi, tenetur. Cum quam distinctio eius. Excepturi iure exercitationem debitis dolores. Pariatur praesentium libero tenetur placeat asperiores?</p>
+
+    <main>
+        <section>
+            <h1> Explore Dom </h1>
+
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum, repellat! Perspiciatis voluptatibus culpa ut, iure laboriosam cum suscipit deleniti architecto!</p>
+            </article>
+
+            <article class="spacial">
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Sapiente blanditiis enim, et pariatur harum error repellendus accusantium totam explicabo suscipit fuga quia ea fugiat, officiis hic. Dolorum, quas.</p>
+            </article>
+
+            <article>
+                <h3>article-3</h3>
+                <p class="author" >author-3</p>
+                <p class="description" title=" do not love you" id="love" >Ut consequuntur quae odio quas libero iusto sint. Quia aspernatur quisquam suscipit facilis molestiae esse ea vero dolor vel quae!</p>
+            </article>
+
+
+            <article id="last-artical">
+                <h3>last-article-3</h3>
+                <p class="author" >LastAuthor-3</p>
+                <p class="description" title=" do not love you" id="love" >Ut consequuntur quae odio quas libero iusto sint. Quia aspernatur quisquam suscipit facilis molestiae esse ea vero dolor vel quae!</p>
+            </article>
+
+          
+        </section>
+
+        
+    </main>
+
+    <script>
+
+     
+
+
+
+        document.getElementById('love').setAttribute('title' , 'love me more');
+
+        var first = document.getElementById('first');
+        first.style.color = 'white';
+        first.style.fontSize = ' 35px ';
+        first.style.backgroundColor = 'red';
+
+
+        var authors = document.getElementsByClassName('author');
+        for (let i = 0; i < authors.length; i++) {
+            const element = authors[i];
+            element.style.fontSize = ' 35px';
+            element.innerHTML = 'lekton-' + (i+1) ;
+            console.log(element.innerHTML);
+
+
+        }
+
+
+        var authors = document.querySelectorAll('.spacial h3');
+        for (let i = 0; i < authors.length; i++) {
+            const element = authors[i];
+            element.style.fontSize = ' 35px';
+            element.innerHTML = 'lekton-' + (i+1) ;
+            console.log(element.innerHTML);
+
+
+        }
+
+
+        const article = document.getElementById('last-artical');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = 'this is add by ZubairBinFerdous';
+        article.appendChild(newParagraph);
+
+
+
+    </script>
+    
+</body>
+</html>
