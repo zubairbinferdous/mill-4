@@ -46,6 +46,20 @@
         
     </main>
 
+
+    <article>
+     <h3>grocery List</h3>
+
+        <ul id="gift-list">
+            <li>gift-item-1</li>
+            <li>gift-item-2</li>
+            <li>gift-item-3</li>
+            <li>gift-item-4</li>
+            <li>gift-item-5</li>
+        </ul>
+    </article>
+
+
     <script>
 
      
@@ -86,6 +100,13 @@
         const newParagraph = document.createElement('p');
         newParagraph.innerHTML = 'this is add by ZubairBinFerdous';
         article.appendChild(newParagraph);
+
+        // add more ul 
+
+        const ul = document.getElementById('gift-list');
+        var li = document.createElement('li');
+        li.innerHTML = 'ok this is from zubair';
+        ul.appendChild(li);
 
 
 
