@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Event </title>
+</head>
+<body>
+
+    <!-- <h1 onclick="alert('programmer')">exploring me</h1>
+    <button onclick="handClick()">click me</button>
+    <button onmousemove="handClick()">click me mouse</button> -->
+
+    <button id="last">click me-1</button>
+    <button id="two">click me-2</button>
+    <button id="three">click me-3</button>
+    <button id="four">click me-3</button>
+
+    <script>
+
+        document.getElementById('last')
+        .addEventListener('click', function () {
+            
+            document.body.style.backgroundColor = 'yellow';
+            
+        })
+        
+
+        function handClick() {
+            // console.log('someone click me');
+            document.body.style.backgroundColor = 'green';
+            document.body.style.color = 'yellow';
+            document.body.style.backgroundColor = 'tomato';
+
+        }
+
+        // var fourButton =  document.getElementById('four');
+        // fourButton.onclick = function() {
+        //     console.log('four person clicked');
+        // }
+
+        // var threeButton = document.getElementById('three');
+        // threeButton.onclick = handClick;
+
+        // var threeButton = document.getElementById('two');
+        // threeButton.addEventListener('click' , handClick);
+
+
+    </script>
+    
+</body>
+</html>
