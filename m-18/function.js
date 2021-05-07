@@ -23,6 +23,8 @@ function even_all(num) {
 num = [ 10 , 20 , 8 , 5 , 33 , 23 ];
 even_all(num);
 
+console.log('new result');
+
 // 88888888888888888888888888888888888888888888
 
 friendAge = [16 , 25 , 28 , 19 , 22 , 21];

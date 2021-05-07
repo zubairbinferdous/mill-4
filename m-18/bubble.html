@@ -1,21 +1,87 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>bubble</title>
 </head>
+<style>
+
+    #myList{
+        color: brown;
+        font-size: 35px;
+
+    }
+
+    #myList li {
+        padding: 10px 0px;
+    }
+
+</style>
+
 <body>
-    <h1>my list website</h1>
+
     <div id="container">
-        <ul id="mylist">
-            <li class="item">Lorem, ipsum dolor.</li>
-            <li class="item">Soluta, rem sint.</li>
-            <li class="item">Eaque, veritatis corrupti.</li>
-            <li class="item">Nam, temporibus saepe?</li>
-            <li class="item">Esse, temporibus cupiditate.</li>
-        </ul>
+        <h1>my list website</h1>
+        <div id="container">
+            <ul id="myList">
+                <li id="first" class="item">Lorem, ipsum dolor.</li>
+                <li class="item">Soluta, rem sint.</li>
+                <li class="item">Eaque, veritatis corrupti.</li>
+                <li class="item">Nam, temporibus saepe?</li>
+                <li class="item">Esse, temporibus cupiditate.</li>
+            </ul>
+        </div>
     </div>
+
+    <button id="addNew"> New item </button>
+
+    <script>
+
+        // var items = document.getElementsByTagName('li');
+
+        // for (let i = 0; i < items.length; i++) {
+        //     const item = items[i];
+        //     item.addEventListener('click', function (event) {
+        //         // console.log(event.target.parentNode);
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+
+        // }
+
+
+        document.getElementById('addNew').addEventListener('click' , function (event) {
+
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li')
+            newItem.innerText = 'Lorem ipsum dolor sit.';
+            itemParent.appendChild(newItem);
+            
+        })
+
+        
+
+        // document.getElementById('first').addEventListener('click' , function (event) {
+        //     console.log('first item click')
+        // })
+
+        // document.getElementById('container').addEventListener('click' , function (event) {
+        //     console.log('container is click')
+        //     event.stopPropagation();
+        //     // event.stopImmediatePropagation();
+        // })
+
+
+        document.getElementById('myList').addEventListener('click' , function (event) {
+            // console.log(this , event.target);
+            event.target.parentNode.removeChild(event.target);
+        })
+
+
+    </script>
+
 </body>
+
 </html>
