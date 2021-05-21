@@ -33,7 +33,6 @@ depositBtn.addEventListener('click' , function(){
     // const totalBalance = depositNumber + currentBalanceNumber;
     // document.getElementById('cureentBalance').innerText = totalBalance
 
-
     document.getElementById('depositValue').value = ''; 
 
 })
