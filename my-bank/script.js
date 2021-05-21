@@ -25,8 +25,9 @@ depositBtn.addEventListener('click' , function(){
     const totalDeposit = depositNumber + currentDepositNumber;
     document.getElementById('cureentvalue').innerText = totalDeposit;
 
-    update('cureentBalance' , depositNumber)
 
+
+    update('cureentBalance' , depositNumber)
     // const currentBalance = document.getElementById('cureentBalance').innerText;
     // const currentBalanceNumber = parseFloat(currentBalance);
     // const totalBalance = depositNumber + currentBalanceNumber;
@@ -44,7 +45,11 @@ const withdrow = document.getElementById('addawithdrow');
 withdrow.addEventListener('click' , function () {
 
     const withdrowNumber = getNumber('withdrow');
-    console.log(withdrowNumber);
+    update('cureentWithdraw' , withdrowNumber)
+    update('cureentBalance' , -1 * withdrowNumber)
+
+    document.getElementById('withdrow').value = '';
+    
 
 })
 
