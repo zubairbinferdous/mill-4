@@ -1,11 +1,11 @@
 
 function addtodo(task){
-    const newTeskElement = document.createElement('li'); // functionDeclaration and 
-}
+    const newTeskElement = document.createElement('li'); 
+} // functionDeclaration and 
 
-var toDo = function(task){     //functionExpression
+var toDo = function(task){     
     
-};
+}; //functionExpression
 
 
 
